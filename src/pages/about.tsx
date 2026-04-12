@@ -13,7 +13,7 @@ export default function About() {
         <Text 
           text="Welcome to the About Page!" 
           className={textStyles()} 
-          size="md"
+          size="2xl"
           color="blue"
           bold
           ital
