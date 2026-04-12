@@ -31,11 +31,6 @@ export const Cadavers: Styles = {
     }
 };
 
-/* =========================
-   🔷 STYLE ENGINE (THE UPGRADE)
-   replaces class-based logic
-========================= */
-
 export const resolveCadaver = (
     breakpoint: Breakpoint,
     theme: Theme = 'dark'
