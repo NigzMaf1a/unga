@@ -1,9 +1,3 @@
-import { useState } from "react";
-
-/* =========================
-   🔷 TYPES (Design Tokens)
-========================= */
-
 type Breakpoint = 'sm' | 'md' | 'lg' | 'xl' | '2xl';
 type Theme = 'dark' | 'light';
 
@@ -58,27 +52,19 @@ export const resolveCadaver = (
 ========================= */
 
 export const CadaverComponents: ComponentStyles = {
-    skeleton: () =>
-        'flex flex-col gap-1 h-screen w-screen overflow-hidden',
+    skeleton: () =>{
+        const flex = "flex flex-col gap-1";
+        const dimensions = 'h-screen w-screen';
+        const overflow = 'overflow-y-hidden overflow-x-hidden'; 
 
-    ribz: () =>
-        'w-full h-1/2 mx-1 bg-green-700'
-};
+        return `${flex} ${dimensions} ${overflow}}`;
+    },
 
-/* =========================
-   🔷 OPTIONAL: HOOK USAGE READY
-========================= */
+    ribz: () =>{
 
-export const useCadaverStyles = (
-    breakpoint: Breakpoint,
-    theme: Theme = 'dark'
-) => {
-    const [bp] = useState<Breakpoint>(breakpoint);
-    const [th] = useState<Theme>(theme);
+        const bg = "bg-green-700";
+        const dimensions = 'w-full h-1/2 mx-1';
 
-    return {
-        root: resolveCadaver(bp, th),
-        skeleton: CadaverComponents.skeleton(),
-        ribz: CadaverComponents.ribz()
-    };
+        return `${dimensions} ${bg}`;
+    }
 };
