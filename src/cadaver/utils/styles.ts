@@ -36,6 +36,7 @@ type ComponentStyles = {
     button: (more?:string) => string;
     fleshHor:(className?: string) => string;
     fleshVer:(className?: string) => string;
+    image:(className?:string) => string;
 };
 
 export const Cadavers: Styles = {
@@ -74,7 +75,7 @@ export const CadaverComponents: ComponentStyles = {
     ribz: (className?: string) =>{
 
         const bg = "bg-white rounded-lg shadow-md border";
-        const flex = "flex flex-col md:flex-row gap-1 p-1";
+        const flex = "flex flex-col flex-grow gap-1 p-1";
         const dimensions = 'w-[99%] mx-[0.5%] mt-[1px]';
 
         return `${dimensions} ${flex} ${bg} ${className || ''}`;
@@ -125,6 +126,11 @@ export const CadaverComponents: ComponentStyles = {
 
     fleshVer:(className?: string) => {
         const base = 'rounded flex grid flex-col';
+        return className ? `${base} ${className}` : base;
+    },
+
+    image:(className?:string) => {
+        const base = 'object-cover w-full h-full';
         return className ? `${base} ${className}` : base;
     }
 };
