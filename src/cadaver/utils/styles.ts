@@ -34,6 +34,8 @@ type ComponentStyles = {
     labelledText: (moreOne?:string, moreTwo?:string) => LabbeledTextProps;
     labelledInput: (moreOne?:string, moreTwo?:string) => LabelledInputProps;
     button: (more?:string) => string;
+    fleshHor:(className?: string) => string;
+    fleshVer:(className?: string) => string;
 };
 
 export const Cadavers: Styles = {
@@ -114,5 +116,15 @@ export const CadaverComponents: ComponentStyles = {
     button: (more?:string) => {
         const base = 'px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors duration-300';
         return more ? `${base} ${more}` : base;
+    }, 
+
+    fleshHor:(className?: string) => {
+        const base = 'rounded grid flex flex-row';
+        return className ? `${base} ${className}` : base;
+    }, 
+
+    fleshVer:(className?: string) => {
+        const base = 'rounded flex grid flex-col';
+        return className ? `${base} ${className}` : base;
     }
 };
