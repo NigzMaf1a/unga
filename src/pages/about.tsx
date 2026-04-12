@@ -4,13 +4,22 @@ import Text from "../cadaver/Text";
 
 export default function About() {
   function textStyles():string{
-    return "text-green-800";
+    return "";
   }
 
   return (
     <Skeleton>
       <Ribz className="h-full">
-        <Text text="Welcome to the About Page!" className={textStyles()} />
+        <Text 
+          text="Welcome to the About Page!" 
+          className={textStyles()} 
+          size="md"
+          color="blue"
+          bold
+          ital
+        />
+
+
         <Text text="Welcome to the About Page!" className={textStyles()} />
         <Text text="Welcome to the About Page!" className={textStyles()} />
       </Ribz>
