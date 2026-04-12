@@ -4,7 +4,7 @@ import Text from "../cadaver/Text";
 
 export default function About() {
   function textStyles():string{
-    return "text-2xl font-bold text-center text-gray-800";
+    return "text-green-800";
   }
 
   return (

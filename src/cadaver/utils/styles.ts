@@ -74,15 +74,15 @@ export const CadaverComponents: ComponentStyles = {
     ribz: (className?: string) =>{
 
         const bg = "bg-white rounded-lg shadow-md border";
-        const flex = "flex flex-col md:flex-row gap-1";
+        const flex = "flex flex-col md:flex-row gap-1 p-1";
         const dimensions = 'w-[99%] mx-[0.5%] mt-[1px]';
 
         return `${dimensions} ${flex} ${bg} ${className || ''}`;
     },
 
     text: (className?: string) => {
-        const text = "text-base font-bold text-center";
-        const color = "text-white";     
+        const text = "font-normal";
+        const color = "text-dark-100";     
 
         return `${text} ${color} ${className || ''}`;
     },
