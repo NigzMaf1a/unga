@@ -9,9 +9,31 @@ interface Styles {
     cadaver: BreakpointStyles;
 }
 
+type LabbeledTextProps = {
+    divStyles: string;
+    labelStyles: string;
+    textStyles: string;
+    moreOne?: string;
+    moreTwo?: string;
+};
+
+type LabelledInputProps = {
+    divStyles: string;
+    labelStyles: string;
+    inputStyles: string;
+    moreOne?: string;
+    moreTwo?: string;
+};
+
+
 type ComponentStyles = {
     skeleton: () => string;
-    ribz: () => string;
+    ribz: (className?: string) => string;
+    text: (className?: string) => string;
+    dynamicDiv:(more?:string) => string;
+    labelledText: (moreOne?:string, moreTwo?:string) => LabbeledTextProps;
+    labelledInput: (moreOne?:string, moreTwo?:string) => LabelledInputProps;
+    button: (more?:string) => string;
 };
 
 export const Cadavers: Styles = {
@@ -33,7 +55,7 @@ export const resolveCadaver = (
 ): string => {
     return [
         Cadavers[theme],
-        'flex', // base layout behavior (extend anytime)
+        'flex',
         Cadavers.cadaver[breakpoint]
     ].join(' ');
 };
@@ -41,17 +63,56 @@ export const resolveCadaver = (
 export const CadaverComponents: ComponentStyles = {
     skeleton: () =>{
         const flex = "flex flex-col gap-1";
-        const dimensions = 'h-screen w-screen';
+        const dimensions = 'h-screen w-[100%]';
         const overflow = 'overflow-y-hidden overflow-x-hidden'; 
 
         return `${flex} ${dimensions} ${overflow}}`;
     },
 
-    ribz: () =>{
+    ribz: (className?: string) =>{
 
-        const bg = "bg-green-700";
-        const dimensions = 'w-full h-1/2 mx-1';
+        const bg = "bg-white rounded-lg shadow-md border";
+        const flex = "flex flex-col md:flex-row gap-1";
+        const dimensions = 'w-[99%] mx-[0.5%] mt-[1px]';
 
-        return `${dimensions} ${bg}`;
+        return `${dimensions} ${flex} ${bg} ${className || ''}`;
+    },
+
+    text: (className?: string) => {
+        const text = "text-base font-bold text-center";
+        const color = "text-white";     
+
+        return `${text} ${color} ${className || ''}`;
+    },
+
+    dynamicDiv:(more?:string) => {
+        const dimensions = 'w-full p-1 grid';
+        const edges = 'rounded-lg shadow-md border';
+        const flex = 'flex flex-col sm:flex-row gap-1';
+
+        const base = `${dimensions} ${flex} ${edges} bg-blue-500`;
+
+        return more ? `${base} ${more}` : base;
+    },
+
+    labelledText: (moreOne?:string, moreTwo?:string) => {
+        return {
+            divStyles: 'flex flex-row gap-1',
+            labelStyles: `text-sm font-semibold ${moreOne ? moreOne : ''}`,
+            textStyles: `text-base ${moreTwo ? moreTwo : ''}`
+        }
+    },
+
+    labelledInput: (moreOne?:string, moreTwo?:string) => {
+        return {
+            divStyles: 'flex flex-col gap-1',
+            labelStyles: `text-sm font-semibold ${moreOne ? moreOne : ''}`,
+            inputStyles: `p-2 border rounded ${moreTwo ? moreTwo : ''}`
+        }
+    },
+
+    button: (more?:string) => {
+        const base = 'px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors duration-300';
+        return more ? `${base} ${more}` : base;
     }
 };

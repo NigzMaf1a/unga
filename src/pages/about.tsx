@@ -1,14 +1,18 @@
 import Skeleton from "../cadaver/Skeleton";
 import Ribz from "../cadaver/Ribz";
+import Text from "../cadaver/Text";
 
 export default function About() {
+  function textStyles():string{
+    return "text-2xl font-bold text-center text-gray-800";
+  }
+
   return (
     <Skeleton>
-      <Ribz>
-        about.
-      </Ribz>
-      <Ribz>
-        about.
+      <Ribz className="h-full">
+        <Text text="Welcome to the About Page!" className={textStyles()} />
+        <Text text="Welcome to the About Page!" className={textStyles()} />
+        <Text text="Welcome to the About Page!" className={textStyles()} />
       </Ribz>
     </Skeleton>
   )
