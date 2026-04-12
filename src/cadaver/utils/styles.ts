@@ -47,10 +47,6 @@ export const resolveCadaver = (
     ].join(' ');
 };
 
-/* =========================
-   🔷 COMPONENT STYLE SYSTEM
-========================= */
-
 export const CadaverComponents: ComponentStyles = {
     skeleton: () =>{
         const flex = "flex flex-col gap-1";
