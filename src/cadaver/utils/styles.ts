@@ -14,10 +14,6 @@ type ComponentStyles = {
     ribz: () => string;
 };
 
-/* =========================
-   🔷 STYLE TOKENS
-========================= */
-
 export const Cadavers: Styles = {
     dark: 'bg-gray-900 text-white',
     light: 'bg-white text-gray-900',
