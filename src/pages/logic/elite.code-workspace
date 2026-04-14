@@ -1,0 +1,195 @@
+{
+	"folders": [
+		{
+			"name": "elite",
+			"path": "../../../../../elite"
+		},
+		{
+			"name": "rituals",
+			"path": "../../../../../rituals"
+		},
+		{
+			"name": "CMD",
+			"path": "../../../../../../../../CMD"
+		},
+		{
+			"name": "TS test",
+			"path": "../../../../../../../../TS test"
+		},
+		{
+			"name": "Convenience",
+			"path": "../../../../../Nigel Docz/Fabricatio Logica/Software Eng/Convenience"
+		},
+		{
+			"name": "React JS",
+			"path": "../../../../../../../../React JS"
+		},
+		{
+			"name": "React TS",
+			"path": "../../../../../../../../React TS"
+		},
+		{
+			"name": "Next JS",
+			"path": "../../../../../../../../Next JS"
+		},
+		{
+			"name": "React Courses",
+			"path": "../../../../../../../../React Courses"
+		},
+		{
+			"name": "Real Projects",
+			"path": "../../../../../../../../Real Projects"
+		},
+		{
+			"name": "Backend Tutorial",
+			"path": "../../../../../../../../Backend Tutorial"
+		},
+		{
+			"name": "Archives",
+			"path": "../../../../../../../../Archives"
+		},
+		{
+			"name": "Aurum Domus Classes",
+			"path": "../../../../../../Desktop/Aurum Domus Classes"
+		},
+		{
+			"name": "Colosseum",
+			"path": "../../../../../../../../xampp/htdocs/Colosseum"
+		},
+		{
+			"name": "Hanging Gardens",
+			"path": "../../../../../../../../xampp/htdocs/Hanging Gardens"
+		},
+		{
+			"name": "UkuleleBand",
+			"path": "../../../../../../../../xampp/htdocs/UkuleleBand"
+		},
+		{
+			"name": "HydraFlow",
+			"path": "../../../../../../../../xampp/htdocs/HydraFlow"
+		},
+		{
+			"name": "Aurum Domus",
+			"path": "../../../../../../../../xampp/htdocs/Aurum Domus"
+		},
+		{
+			"name": "UkuleleBandSample",
+			"path": "../../../../../../../../xampp/htdocs/UkuleleBandSample"
+		},
+		{
+			"name": "UkuleleBandExpo",
+			"path": "../../../../../../../../xampp/htdocs/UkuleleBandExpo"
+		},
+		{
+			"name": "Firebase",
+			"path": "../../../../../../../../Firebase"
+		},
+		{
+			"name": "Portfolio",
+			"path": "../../../../../../../../xampp/htdocs/Portfolio"
+		},
+		{
+			"name": "java",
+			"path": "../../../../../../AndroidStudioProjects/TheUkuleleBand/app/src/main/java"
+		},
+		{
+			"name": "World Wise Word",
+			"path": "../../../../../Nigel Docz/Fabricatio Logica/Software Eng/World Wise Word"
+		},
+		{
+			"name": "WAREHAUZ",
+			"path": "../../../../../Nigel Docz/Fabricatio Logica/Software Eng/WAREHAUZ"
+		},
+		{
+			"name": "Classes",
+			"path": "../../../../../../../../Classes"
+		},
+		{
+			"name": "Practice",
+			"path": "../../../../../../../../Practice"
+		},
+		{
+			"name": "Git Personal",
+			"path": "../../../../../../../../Git Personal"
+		},
+		{
+			"name": "Fork",
+			"path": "../../../../../../../../Fork"
+		},
+		{
+			"name": "Merged One",
+			"path": "../../../../../../../../Merged One"
+		},
+		{
+			"name": "Github tutorial",
+			"path": "../../../../../../../../Github tutorial"
+		},
+		{
+			"name": "aurum-domus",
+			"path": "../../../../../../../../aurum-domus"
+		},
+		{
+			"name": "aurumapi",
+			"path": "../../../../../../../../xampp/htdocs/aurumapi"
+		},
+		{
+			"name": "Mantine",
+			"path": "../../../../../../../../Mantine"
+		},
+		{
+			"name": "Web Dev Simplified",
+			"path": "../../../../../../../../Web Dev Simplified"
+		},
+		{
+			"name": "Projects",
+			"path": "../../../../../../Desktop/Projects"
+		},
+		{
+			"name": "Concepts",
+			"path": "../../../../../../../../Concepts"
+		},
+		{
+			"name": "visit-gate",
+			"path": "../../../../../../Desktop/visit-gate"
+		},
+		{
+			"name": "Certified",
+			"path": "../../../../../../../../Certified"
+		},
+		{
+			"name": "Indica",
+			"path": "../../../../../../../../Indica"
+		},
+		{
+			"name": "NigelSkill",
+			"path": "../../../../../../../../NigelSkill"
+		},
+		{
+			"name": "Kibandanski",
+			"path": "../../../../../../../../Kibandanski"
+		},
+		{
+			"name": "Schemas",
+			"path": "../../../../../../../../Schemas"
+		},
+		{
+			"name": "The Grind",
+			"path": "../../../../../The Grind"
+		},
+		{
+			"name": "Angular",
+			"path": "../../../../../../../../Angular"
+		},
+		{
+			"name": "Cheats",
+			"path": "../../../../../../../../Cheats"
+		},
+		{
+			"path": "../../../.."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Practice",
+		"git.ignoreLimitWarning": true
+	}
+}

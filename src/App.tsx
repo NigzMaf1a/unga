@@ -1,7 +1,11 @@
-import About from "./pages/about";
+import MainPage from "./pages/logic/MainPage";
+import BrowserRoutes from "./navigation/routes";
 
 export default function App() {
   return (
-    <About />
+    <>
+      <MainPage />
+      <BrowserRoutes/>
+    </>
   )
 }

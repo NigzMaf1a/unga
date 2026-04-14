@@ -3,12 +3,13 @@ import { CadaverComponents } from "./utils/styles";
 
 interface SkeletonProps {
     children: React.ReactNode;
+    className?: string;
 }
 
-export default function Skeleton({ children }: SkeletonProps) { 
+export default function Skeleton({ children, className }: SkeletonProps) { 
 
   return (
-    <div className={CadaverComponents.skeleton()}>
+    <div className={CadaverComponents.skeleton(className)}>
       {children}
     </div>
   );

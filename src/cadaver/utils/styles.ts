@@ -27,7 +27,7 @@ type LabelledInputProps = {
 
 
 type ComponentStyles = {
-    skeleton: () => string;
+    skeleton: (className?:string) => string;
     ribz: (className?: string) => string;
     text: (className?: string) => string;
     dynamicDiv:(more?:string) => string;
@@ -64,12 +64,12 @@ export const resolveCadaver = (
 };
 
 export const CadaverComponents: ComponentStyles = {
-    skeleton: () =>{
+    skeleton: (className?:string) =>{
         const flex = "flex flex-col gap-1";
         const dimensions = 'h-screen w-[100%]';
         const overflow = 'overflow-y-hidden overflow-x-hidden'; 
 
-        return `${flex} ${dimensions} ${overflow}}`;
+        return `${flex} ${dimensions} ${overflow} ${className || ''}`;
     },
 
     ribz: (className?: string) =>{
@@ -93,7 +93,7 @@ export const CadaverComponents: ComponentStyles = {
         const edges = 'rounded-lg shadow-md border';
         const flex = 'flex flex-col sm:flex-row gap-1';
 
-        const base = `${dimensions} ${flex} ${edges} bg-blue-500`;
+        const base = `${dimensions} ${flex} ${edges}`;
 
         return more ? `${base} ${more}` : base;
     },
