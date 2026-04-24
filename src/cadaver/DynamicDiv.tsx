@@ -9,11 +9,12 @@ interface DynamicDivProps {
     onMouseLeave?: () => void;
     onClick?: () => void;
     className?: string;
+    style?: React.CSSProperties;
 }
 
-export default function DynamicDiv({children, onMouseEnter, onMouseLeave, onClick, className}: DynamicDivProps) {
+export default function DynamicDiv({children, onMouseEnter, onMouseLeave, onClick, className, style}: DynamicDivProps) {
   return (
-    <div onClick={onClick} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} className={CadaverComponents.dynamicDiv(className)}>
+    <div onClick={onClick} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} className={CadaverComponents.dynamicDiv(className)} style={style}>
         {children}
     </div>
   );

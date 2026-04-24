@@ -85,7 +85,7 @@ export default function TopStrip() {
        { !menuOpen && <MenuButton onClick={() => toggleMenu()} onMouseEnter={() => toggleMenu()} /> }
     </FleshHor>
 
-    { menuOpen && <Menu onMouseLeave={() => toggleMenu()}/> }
+    { menuOpen && <Menu onMouseLeave={() => toggleMenu()} style={{ backgroundColor: bgColor }} /> }
 
     </>
   );
