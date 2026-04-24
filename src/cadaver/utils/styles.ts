@@ -65,7 +65,7 @@ export const resolveCadaver = (
 
 export const CadaverComponents: ComponentStyles = {
     skeleton: (className?:string) =>{
-        const flex = "flex flex-col gap-1";
+        const flex = "flex flex-col";
         const dimensions = 'h-screen w-[100%]';
         const overflow = 'overflow-y-hidden overflow-x-hidden'; 
 
@@ -89,9 +89,9 @@ export const CadaverComponents: ComponentStyles = {
     },
 
     dynamicDiv:(more?:string) => {
-        const dimensions = 'w-full p-1 grid';
-        const edges = 'rounded-lg shadow-md border';
-        const flex = 'flex flex-col sm:flex-row gap-1';
+        const dimensions = '';
+        const edges = 'rounded-lg';
+        const flex = 'flex';
 
         const base = `${dimensions} ${flex} ${edges}`;
 
@@ -120,7 +120,7 @@ export const CadaverComponents: ComponentStyles = {
     }, 
 
     fleshHor:(className?: string) => {
-        const base = 'rounded grid flex flex-row';
+        const base = 'rounded flex flex-row';
         return className ? `${base} ${className}` : base;
     }, 
 

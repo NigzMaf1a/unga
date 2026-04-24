@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import BackgroundImage from "../cadaver/BackgroundImage";
-import DynamicDiv from "../cadaver/DynamicDiv";
 import Text from "../cadaver/Text";
+import Skeleton from "../cadaver/Skeleton";
 
 //styles
 import { glowStyles } from "../scripts/data/colorStyles";
+import DynamicDiv from "../cadaver/DynamicDiv";
 
 export default function SplashScreen() {
 
@@ -26,19 +27,19 @@ export default function SplashScreen() {
         return `${size} ${pos} ${animation} ${glowStyles[glowIndex]}`;
     }
 
-    const divStyles = "flex items-center justify-center min-h-screen text-white";
-
     return (
         <BackgroundImage src="/bgOne.jpg">
-            <DynamicDiv className={divStyles}>
-                <Text 
-                    text="Welcome to my portfolio!" 
-                    className={textStyles()} 
-                    color="green" 
-                    bold 
-                    ital 
-                />
-            </DynamicDiv>
+            <Skeleton>
+                <DynamicDiv>
+                    <Text 
+                        text="Welcome to my portfolio!" 
+                        className={textStyles()} 
+                        color="green" 
+                        bold 
+                        ital 
+                    />
+                </DynamicDiv>   
+            </Skeleton>
         </BackgroundImage>
     );
 }

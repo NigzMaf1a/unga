@@ -28,7 +28,7 @@ const BackgroundImage: React.FC<BackgroundImageProps> = ({
       )}
 
       {/* Content */}
-      <div className="relative z-10">
+      <div className="absolute z-10">
         {children}
       </div>
 
