@@ -1,9 +1,9 @@
 import Page from "../components/Page";
 
-export default function Technology() {
+export default function Skills() {
   return (
     <Page>
-      <div>Technology</div>
+      <div>Skills</div>
     </Page>
   );
 }

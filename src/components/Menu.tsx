@@ -1,5 +1,8 @@
-// import { useNavigate } from "react-router-dom";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 import DynamicDiv from "../cadaver/DynamicDiv";
+
+import { AppColors } from "../scripts/data/colors";
 
 interface MenuProps {
   onMouseLeave: () => void;
@@ -14,19 +17,26 @@ interface MenuItemProps {
 
 function MenuItem({ label, icon, onClick }: MenuItemProps) {
 
+  const [isHovered, setIsHovered] = React.useState<boolean>(false);
+
   function itemStyles(): string {
     const dimensions = "w-[392px] h-12 mx-[4px] my-1 rounded-lg";
     const padding = "p-2";
     const flex = "flex items-center gap-2";
-    const hover = "";
     const text = 'text-white';
-    const border = "border-b border-gray-300 last:border-none";
+    const border = isHovered ? "!border-none" : "border-b border-[`${AppColors.accent}`]";
+
+    const hover = isHovered ? "bg-blue-500" : "";
 
     return ` ${dimensions} ${padding} ${flex} ${hover} ${text} ${border}`;
   }
 
   return (
-    <DynamicDiv onClick={onClick} className={itemStyles()}>
+    <DynamicDiv onClick={onClick} 
+                className={itemStyles()}
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+    >
       <span>{icon}</span>
       <span>{label}</span>
     </DynamicDiv>
@@ -52,7 +62,7 @@ function Beautify(){
 }
 
 export default function Menu({ onMouseLeave, style }: MenuProps) {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   function  contStyles(): string {
     const dimensions = "w-[400px] h-full !rounded-none";
@@ -65,8 +75,13 @@ export default function Menu({ onMouseLeave, style }: MenuProps) {
   return (
     <DynamicDiv className={contStyles()} onMouseLeave={onMouseLeave} style={style}>
         <Beautify />
-        <MenuItem label="Home" icon="🏠" onClick={() => console.log("Home clicked")} />
-        <MenuItem label="Home" icon="🏠" onClick={() => console.log("Home clicked")} />
+        <MenuItem label="Home" icon="🏠" onClick={() => navigate('/')} />
+        <MenuItem label="Education" icon="🏠" onClick={() => navigate('/education')} />
+        <MenuItem label="Experience" icon="🏠" onClick={() => navigate('/experience')} />
+        <MenuItem label="Projects" icon="🏠" onClick={() => navigate('/projects')} />
+        <MenuItem label="Skills" icon="🏠" onClick={() => navigate('/skills')} />
+        <MenuItem label="Technology" icon="🏠" onClick={() => navigate('/technology')} />
+        <MenuItem label="Contact" icon="🏠" onClick={() => navigate('/contact')} />
     </DynamicDiv>
   );
 }

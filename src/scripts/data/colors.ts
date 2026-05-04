@@ -6,3 +6,9 @@ export const techColors = {
   blue: ["#1e3a8a", "#1d4ed8", "#2563eb"], // strong system blue
   indigo: ["#1e1b4b", "#312e81", "#4338ca"] // dark UI violet-blue
 };
+
+export const AppColors = {
+  primary: techColors.cyan[1], // main tech color
+  secondary: techColors.teal[2], // complementary tech color
+  accent: techColors.emerald[3], // highlight color for UI elements
+}

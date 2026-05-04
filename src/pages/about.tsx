@@ -42,6 +42,7 @@ function Acquaint(){
   function contStyles(): string {
     const dimensions = "w-full md:w-1/2 lg:w-3/4 h-full !border-none bg-blue-100";
     const margin = "m-0 md:m-2 mt-1 rounded-lg";
+    
     return `${dimensions} ${margin}`;
   }
 

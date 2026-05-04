@@ -1,9 +1,9 @@
 import Page from "../components/Page";
 
-export default function Technology() {
+export default function Contact() {
   return (
     <Page>
-      <div>Technology</div>
+      <div>Contact</div>
     </Page>
   );
 }

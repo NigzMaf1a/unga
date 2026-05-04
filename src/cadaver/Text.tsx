@@ -2,7 +2,7 @@
 import { CadaverComponents } from "./utils/styles";
 
 type TextSize = 'sm' | 'md' | 'lg' | 'xl' | '2xl';
-type TextColor = 'blue' | 'red' | 'green' | 'yellow' | 'black' | 'gray';
+type TextColor = 'blue' | 'red' | 'green' | 'yellow' | 'black' | 'gray' | 'white';
 type Bold = true;
 type Ital = true;
 
@@ -50,6 +50,8 @@ export default function Text({ text, size, bold, className, ital, color }: TextP
                 return 'text-black';
             case 'gray':
                 return 'text-gray-500';
+            case 'white':
+                return 'text-white';
             default:
                 return 'text-gray-800';
         } else return 'text-gray-800';
